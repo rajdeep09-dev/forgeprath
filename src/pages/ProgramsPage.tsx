@@ -1,19 +1,24 @@
 import { useState } from "react";
-import { Check, X, Smartphone } from "lucide-react";
+import { Check, X } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
 import CheckoutModal from "@/components/CheckoutModal";
+
+import nutritionImg from "@/assets/feature_nutrition_tracking.png";
+import progressImg from "@/assets/feature_progress_tracking.png";
 
 const features = [
   {
     title: "Nutrition Tracking",
     description:
       "Log your meals, scan barcodes, and hit your macros with zero guesswork. Every meal is planned around your preferences — veg, non-veg, or flexible.",
+    image: nutritionImg,
   },
   {
-    title: "Video Demonstrations",
+    title: "Progress Tracking",
     description:
-      "Every exercise comes with a detailed video guide so you perfect your form. No more guessing in the gym — just follow along and execute.",
+      "Track body measurements, weight trends, and check stats over time. Weekly check-ins ensure you never hit a plateau.",
+    image: progressImg,
   },
 ];
 
@@ -46,15 +51,15 @@ const ProgramsPage = () => {
             </p>
           </ScrollReveal>
 
-          {/* App Features */}
+          {/* App Features with real images */}
           <div className="space-y-16 mb-32">
             {features.map((f, i) => (
               <ScrollReveal key={f.title} delay={i * 0.15}>
                 <div className={`grid md:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? "md:direction-rtl" : ""}`}>
-                  {/* Phone Mockup */}
+                  {/* Phone Mockup with real image */}
                   <div className={`${i % 2 === 1 ? "md:order-2" : ""}`}>
-                    <div className="glass glow-border rounded-[2rem] aspect-[9/16] max-w-[280px] mx-auto flex items-center justify-center">
-                      <Smartphone size={48} className="text-muted-foreground/30" />
+                    <div className="max-w-[320px] mx-auto">
+                      <img src={f.image} alt={f.title} className="w-full h-auto" loading="lazy" />
                     </div>
                   </div>
                   {/* Text */}

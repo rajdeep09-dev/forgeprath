@@ -7,15 +7,21 @@ import InstagramFeed from "@/components/InstagramFeed";
 import ContactFooter from "@/components/ContactFooter";
 import Marquee from "@/components/Marquee";
 import ScrollReveal from "@/components/ScrollReveal";
-import { User } from "lucide-react";
+
+import img01 from "@/assets/client_transformation_01.jpg";
+import img02 from "@/assets/client_transformation_02.jpg";
+import img03 from "@/assets/client_transformation_03.jpg";
+import img04 from "@/assets/client_transformation_04.jpg";
+import img05 from "@/assets/client_transformation_05.jpg";
+import img06 from "@/assets/client_transformation_06.jpg";
 
 const results = [
-  { name: "Arjun K.", stat: "-18kg", quote: "Lost 18kg in 14 weeks. Best shape of my life." },
-  { name: "Priya M.", stat: "+6kg LBM", quote: "Gained lean muscle while dropping body fat." },
-  { name: "Rahul S.", stat: "1st Place", quote: "Won my first bodybuilding show." },
-  { name: "Sneha T.", stat: "-12kg", quote: "Finally understand nutrition. Changed everything." },
-  { name: "Vikram D.", stat: "+80kg DL", quote: "Deadlift went from 100kg to 180kg." },
-  { name: "Ananya R.", stat: "Transformed", quote: "Postpartum recovery done right. Stronger than ever." },
+  { name: "Bangalore Nationals", stat: "1st Place", quote: "Weighted Endurance — First Place 🥇", image: img01 },
+  { name: "6-Month Transformation", stat: "+12kg LBM", quote: "From skinny to muscular in just 6 months.", image: img02 },
+  { name: "1-Year Transformation", stat: "Transformed", quote: "Complete physique overhaul in 12 months.", image: img03 },
+  { name: "Back Development", stat: "6 Months", quote: "May to November — insane back gains.", image: img04 },
+  { name: "Maharashtra State", stat: "🥉 Bronze", quote: "Bronze Medal — State Powerlifting Championship.", image: img05 },
+  { name: "Client & Coach", stat: "Winner", quote: "ISC Streetlifting National Championship 2025.", image: img06 },
 ];
 
 const PortfolioPage = () => {
@@ -38,19 +44,8 @@ const PortfolioPage = () => {
         <Marquee speed={40}>
           {results.map((r) => (
             <div key={r.name} className="glass glow-border w-[340px] flex-shrink-0 overflow-hidden group">
-              <div className="flex">
-                <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center border-r border-[hsl(var(--border))]">
-                  <div className="text-center">
-                    <User size={32} className="mx-auto text-muted-foreground/30 mb-1" />
-                    <span className="mono-label">Before</span>
-                  </div>
-                </div>
-                <div className="flex-1 aspect-[3/4] bg-[hsl(var(--muted))] flex items-center justify-center">
-                  <div className="text-center">
-                    <User size={32} className="mx-auto text-muted-foreground/30 mb-1" />
-                    <span className="mono-label">After</span>
-                  </div>
-                </div>
+              <div className="aspect-[3/4] overflow-hidden">
+                <img src={r.image} alt={r.name} className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-5 border-t border-[hsl(var(--border))]">
                 <div className="flex items-baseline justify-between mb-2">
