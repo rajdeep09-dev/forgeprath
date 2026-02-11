@@ -4,8 +4,8 @@ import HeroParticles from "./HeroParticles";
 
 const ReededHero = () => (
   <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#030303]">
-    {/* Z-0: Background typography behind reeded glass */}
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+    {/* Z-5: Typography in front of reeded glass */}
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-[5]">
       <div className="flex flex-col items-center leading-none">
         <span className="font-heading font-black uppercase text-[clamp(6rem,15vw,15rem)] tracking-tight text-transparent hero-text-outline">
           DEFINE
