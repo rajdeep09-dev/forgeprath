@@ -1,13 +1,19 @@
 import ScrollReveal from "./ScrollReveal";
-import { User } from "lucide-react";
+
+import img01 from "@/assets/client_transformation_01.jpg";
+import img02 from "@/assets/client_transformation_02.jpg";
+import img03 from "@/assets/client_transformation_03.jpg";
+import img04 from "@/assets/client_transformation_04.jpg";
+import img05 from "@/assets/client_transformation_05.jpg";
+import img06 from "@/assets/client_transformation_06.jpg";
 
 const results = [
-  { name: "Arjun K.", quote: "Lost 18kg in 14 weeks. Best shape of my life.", stat: "-18kg" },
-  { name: "Priya M.", quote: "Gained lean muscle while dropping body fat. Incredible.", stat: "+6kg LBM" },
-  { name: "Rahul S.", quote: "Won my first bodybuilding show. Couldn't have done it alone.", stat: "1st Place" },
-  { name: "Sneha T.", quote: "Finally understand nutrition. This changed everything.", stat: "-12kg" },
-  { name: "Vikram D.", quote: "Deadlift went from 100kg to 180kg in 6 months.", stat: "+80kg DL" },
-  { name: "Ananya R.", quote: "Postpartum recovery done right. Stronger than ever.", stat: "Transformed" },
+  { name: "Bangalore Nationals", quote: "Weighted Endurance — First Place 🥇", stat: "1st Place", image: img01 },
+  { name: "6-Month Transformation", quote: "From skinny to muscular in just 6 months.", stat: "+12kg LBM", image: img02 },
+  { name: "1-Year Transformation", quote: "Complete physique overhaul in 12 months.", stat: "Transformed", image: img03 },
+  { name: "Back Development", quote: "May to November — insane back gains.", stat: "6 Months", image: img04 },
+  { name: "Maharashtra State", quote: "Bronze Medal — State Powerlifting Championship.", stat: "🥉 Bronze", image: img05 },
+  { name: "Client & Coach", quote: "ISC Streetlifting National Championship 2025.", stat: "Winner", image: img06 },
 ];
 
 const ResultsSection = () => (
@@ -26,16 +32,8 @@ const ResultsSection = () => (
         {results.map((r, i) => (
           <ScrollReveal key={r.name} delay={i * 0.08}>
             <div className="glass glow-border p-4 group hover:scale-105 hover:shadow-[0_0_40px_hsl(0_0%_100%/0.15)] transition-all duration-500 relative overflow-hidden rounded-2xl">
-              {/* Main "After" image placeholder */}
-              <div className="aspect-[3/4] bg-[hsl(var(--muted))] rounded-xl flex items-center justify-center mb-4 relative">
-                <User size={48} className="text-muted-foreground/20" />
-                {/* PiP "Before" inset */}
-                <div className="absolute bottom-2 left-2 w-16 h-20 rounded-lg bg-[hsl(var(--muted))] border-2 border-[hsl(var(--glass-border))] flex items-center justify-center shadow-lg">
-                  <div className="text-center">
-                    <User size={14} className="mx-auto text-muted-foreground/30" />
-                    <span className="text-[8px] uppercase tracking-wider text-muted-foreground/40">Before</span>
-                  </div>
-                </div>
+              <div className="aspect-[3/4] rounded-xl overflow-hidden mb-4 relative">
+                <img src={r.image} alt={r.name} className="w-full h-full object-cover" loading="lazy" />
               </div>
               <p className="font-heading text-3xl font-black mb-1">{r.stat}</p>
               <p className="text-sm text-muted-foreground italic mb-2">"{r.quote}"</p>
