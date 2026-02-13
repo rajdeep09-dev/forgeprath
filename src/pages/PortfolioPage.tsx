@@ -47,10 +47,10 @@ const PortfolioPage = () => {
               <div className="aspect-[3/4] overflow-hidden">
                 <img src={r.image} alt={r.name} className="w-full h-full object-cover" loading="lazy" />
               </div>
-              <div className="p-5 border-t border-[hsl(var(--border))]">
+              <div className="p-5 border-t border-border">
                 <div className="flex items-baseline justify-between mb-2">
-                  <p className="font-heading text-lg uppercase">{r.name}</p>
-                  <p className="font-heading text-xl font-bold">{r.stat}</p>
+                  <p className="font-heading text-lg uppercase text-foreground">{r.name}</p>
+                  <p className="font-heading text-xl font-bold text-foreground">{r.stat}</p>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">"{r.quote}"</p>
               </div>

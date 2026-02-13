@@ -42,25 +42,25 @@ const LifestylePage = () => {
                 >
                   {/* Image placeholder */}
                   <div
-                    className={`bg-[hsl(0_0%_100%/0.03)] flex items-center justify-center ${
+                    className={`bg-muted/30 flex items-center justify-center ${
                       post.span === "row-span-2" ? "aspect-[3/4]" : "aspect-square"
                     }`}
                   >
                     <ImageIcon
                       size={32}
-                      className="text-[hsl(0_0%_100%/0.1)]"
+                      className="text-muted-foreground/20"
                     />
                   </div>
 
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-[hsl(0_0%_0%/0.7)] backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-3 p-4">
+                  <div className="absolute inset-0 bg-background/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-3 p-4">
                     <div className="flex items-center gap-2">
                       <Heart size={18} className="text-foreground" />
-                      <span className="font-heading text-lg">
+                      <span className="font-heading text-lg text-foreground">
                         {post.likes.toLocaleString()}
                       </span>
                     </div>
-                    <p className="text-sm text-[hsl(0_0%_100%/0.6)] text-center">
+                    <p className="text-sm text-muted-foreground text-center">
                       {post.caption}
                     </p>
                   </div>

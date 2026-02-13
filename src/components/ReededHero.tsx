@@ -10,7 +10,7 @@ const ReededHero = () => (
         <span className="font-heading font-black uppercase text-[clamp(6rem,15vw,15rem)] tracking-tight text-transparent hero-text-outline">
           DEFINE
         </span>
-        <span className="font-heading font-black uppercase text-[clamp(6rem,15vw,15rem)] tracking-tight text-white">
+        <span className="font-heading font-black uppercase text-[clamp(6rem,15vw,15rem)] tracking-tight text-foreground">
           REALITY
         </span>
       </div>
@@ -76,7 +76,7 @@ const ReededHero = () => (
         </a>
         <a
           href="#results"
-          className="text-sm uppercase tracking-widest text-[hsl(0_0%_100%/0.5)] hover:text-white transition-colors underline underline-offset-4 decoration-[hsl(0_0%_100%/0.2)]"
+          className="text-sm uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-foreground"
         >
           Client Results
         </a>
